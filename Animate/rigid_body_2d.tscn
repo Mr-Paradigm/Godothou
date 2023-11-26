@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b31gnigcp08qf"]
+
+[ext_resource type="Script" path="res://Animate/rb.gd" id="1_l05xj"]
+[ext_resource type="Texture2D" uid="uid://d2hnm1l4buxrp" path="res://Animate/snorp.png" id="1_ycm88"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h5q6g"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h1yb8"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_h5q6g")
+gravity_scale = 0.0
+script = ExtResource("1_l05xj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_h1yb8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ycm88")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
