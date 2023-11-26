@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cupbaxrdb82mb"]
+
+[ext_resource type="Texture2D" uid="uid://dy3oscofc5ry7" path="res://Textures/275px-Th143SkiesOfGensokyo.jpg" id="1_g05fj"]
+[ext_resource type="PackedScene" uid="uid://dohikt1ko0x8m" path="res://Reimu/reimu.tscn" id="2_57j41"]
+
+[node name="HDoS" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 3
+position = Vector2(0.00012207, 0)
+scale = Vector2(2.02091, 2.02453)
+texture = ExtResource("1_g05fj")
+region_enabled = true
+region_rect = Rect2(-3000, -3000, 3000, 3000)
+
+[node name="Reimu" parent="." instance=ExtResource("2_57j41")]
