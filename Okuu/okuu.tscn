@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvc8bjccbfiky"]
+[gd_scene load_steps=3 format=3 uid="uid://bvc8bjccbfiky"]
 
 [ext_resource type="Texture2D" uid="uid://c2m6lba8wtnnw" path="res://Textures/Th135Utsuho.png" id="1_osy8m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fyv0"]
 
 [node name="Okuu" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_osy8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0fyv0")
