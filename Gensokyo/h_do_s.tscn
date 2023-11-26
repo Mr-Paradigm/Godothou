@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cupbaxrdb82mb"]
+[gd_scene load_steps=4 format=3 uid="uid://cupbaxrdb82mb"]
 
 [ext_resource type="Texture2D" uid="uid://dy3oscofc5ry7" path="res://Textures/275px-Th143SkiesOfGensokyo.jpg" id="1_g05fj"]
 [ext_resource type="PackedScene" uid="uid://dohikt1ko0x8m" path="res://Reimu/reimu.tscn" id="2_57j41"]
+[ext_resource type="PackedScene" uid="uid://bvc8bjccbfiky" path="res://Okuu/okuu.tscn" id="3_sc1l4"]
 
 [node name="HDoS" type="Node2D"]
 
@@ -14,3 +15,5 @@ region_enabled = true
 region_rect = Rect2(-3000, -3000, 3000, 3000)
 
 [node name="Reimu" parent="." instance=ExtResource("2_57j41")]
+
+[node name="Okuu" parent="." instance=ExtResource("3_sc1l4")]
