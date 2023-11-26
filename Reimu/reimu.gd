@@ -1,14 +1,11 @@
 extends CharacterBody2D
 
-
 var speed := 500.0
+var shspeed := speed/2
 
 func _physics_process(delta):
 	movement()
 
 func movement():
-	var x_move = Input.get_action_strength("Right") - Input.get_action_strength("Left")
-	var y_move = Input.get_action_strength("Down") - Input.get_action_strength("Up")
-	var mov = Vector2(x_move,y_move)
-	velocity = mov.normalized()*speed
+	velocity = Input.get_vector("Left","Right","Up","Down").normalized()*(shspeed if Input.is_physical_key_pressed(KEY_SHIFT) else speed)
 	move_and_slide()
