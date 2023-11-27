@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvc8bjccbfiky"]
+[gd_scene load_steps=5 format=3 uid="uid://bvc8bjccbfiky"]
 
 [ext_resource type="Script" path="res://Okuu/okuu.gd" id="1_nttcw"]
 [ext_resource type="Texture2D" uid="uid://c2m6lba8wtnnw" path="res://Textures/Th135Utsuho.png" id="1_osy8m"]
+[ext_resource type="PackedScene" uid="uid://b31gnigcp08qf" path="res://Animate/rigid_body_2d.tscn" id="2_humrl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0fyv0"]
 
 [node name="Okuu" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_nttcw")
+bulletscene = ExtResource("2_humrl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_osy8m")
@@ -19,4 +21,8 @@ wait_time = 2.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0fyv0")
 
+
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
