@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
-var time = $Timer.get_time_left
+func _ready():
+	$Timer.start()
+	position = Vector2(600,600)
 
-
+func _on_timer_timeout():
+	velocity = Vector2(randf_range(-200,200),randf_range(-200,200))
 
 func _physics_process(delta):
-	if(time > 50):
-		
-	
+	move_and_slide()

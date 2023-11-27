@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dohikt1ko0x8m" path="res://Reimu/reimu.tscn" id="2_57j41"]
 [ext_resource type="PackedScene" uid="uid://bvc8bjccbfiky" path="res://Okuu/okuu.tscn" id="3_sc1l4"]
 
-[node name="HDoS" type="Node2D"]
+[node name="HDoS" type="Node2D" node_paths=PackedStringArray("okuu")]
 script = ExtResource("1_h8k3q")
 bulletscene = ExtResource("2_12tyc")
+okuu = NodePath("Okuu")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 3

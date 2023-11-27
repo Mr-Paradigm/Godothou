@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b31gnigcp08qf"]
 
 [ext_resource type="Script" path="res://Animate/rb.gd" id="1_l05xj"]
-[ext_resource type="Texture2D" uid="uid://d2hnm1l4buxrp" path="res://Animate/snorp.png" id="1_ycm88"]
+[ext_resource type="Texture2D" uid="uid://d2hnm1l4buxrp" path="res://Textures/snorp.png" id="2_turto"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h5q6g"]
 friction = 0.0
@@ -17,7 +17,7 @@ script = ExtResource("1_l05xj")
 shape = SubResource("CircleShape2D_h1yb8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ycm88")
+texture = ExtResource("2_turto")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
