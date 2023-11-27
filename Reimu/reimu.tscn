@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dohikt1ko0x8m"]
+[gd_scene load_steps=2 format=3 uid="uid://dohikt1ko0x8m"]
 
 [ext_resource type="Script" path="res://Reimu/reimu.gd" id="1_s8l6w"]
-[ext_resource type="Texture2D" uid="uid://c70eyx4tep72p" path="res://Textures/IMG_6239.png" id="2_efnt4"]
 
 [node name="Reimu" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_s8l6w")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_efnt4")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
